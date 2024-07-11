@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pax.tlmanager">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<!--    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.pax.permission.RECV_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="ScopedStorage"
+            android:value="true" />
+
+        <activity android:name="com.pax.tlmanager.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.pax.tlmanager.setting.SettingActivity" />
+        <activity
+            android:name=".cusui.activity.SearchCardActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.pax.tlmanager">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.INPUT_ACCOUNT" />
+
+                <category android:name="com.pax.us.pay.ui.category.SECURITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".cusui.activity.EnterPinActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.pax.tlmanager">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.ENTER_PIN" />
+
+                <category android:name="com.pax.us.pay.ui.category.SECURITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.EnterCVVActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.pax.us.pay.UI"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.ENTER_CVV" />
+
+                <category android:name="com.pax.us.pay.ui.category.SECURITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.DialogActivity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.pax.tlmanager"
+            android:theme="@style/ActivityTranslucent" />
+
+        <activity
+            android:name=".cusui.activity.SignatureActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.pax.tlmanager">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.GET_SIGNATURE" />
+
+                <category android:name="com.pax.us.pay.ui.category.SIGNATURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.EnterZipActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.pax.tlmanager"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.ENTER_ZIP_CODE" />
+
+                <category android:name="com.pax.us.pay.ui.category.TEXT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.EnterExpiryDateActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.pax.tlmanager"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.ENTER_EXPIRY_DATE" />
+
+                <category android:name="com.pax.us.pay.ui.category.TEXT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.SelectAIDActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.pax.tlmanager">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.SELECT_AID" />
+                <action android:name="com.pax.us.pay.action.SELECT_LANGUAGE" />
+
+                <category android:name="com.pax.us.pay.ui.category.OPTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.ShowMessageCenterActivity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.pax.tlmanager">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.SHOW_MESSAGE_CENTER" />
+
+                <category android:name="com.pax.us.pay.ui.category.MANAGER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.InputTextActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.pax.us.pay.UI"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.INPUT_TEXT" />
+
+                <category android:name="com.pax.us.pay.ui.category.MANAGER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.ShowTextBoxActivity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.pax.us.pay.UI">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.SHOW_TEXT_BOX" />
+
+                <category android:name="com.pax.us.pay.ui.category.MANAGER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".cusui.activity.ShowDialogManagerActivity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.pax.us.pay.UI">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.SHOW_DIALOG" />
+
+                <category android:name="com.pax.us.pay.ui.category.MANAGER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".cusui.activity.ShowMsgActivity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleTop"
+            android:taskAffinity="com.pax.us.pay.UI">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.action.SHOW_MESSAGE" />
+
+                <category android:name="com.pax.us.pay.ui.category.MANAGER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".setting.IdlePictureActivity" />
+
+        <receiver android:name=".cusui.receiver.StatusReceiver">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.CARD_PROCESS_STARTED" />
+                <action android:name="com.pax.us.pay.CARD_PROCESS_ERROR" />
+                <action android:name="com.pax.us.pay.CARD_PROCESS_COMPLETED" />
+
+                <category android:name="com.pax.us.pay.status.category.CARD" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.pax.us.pay.REMOVE_CARD_STARTED" />
+                <action android:name="com.pax.us.pay.REMOVE_CARD_FINISHED" />
+
+                <category android:name="com.pax.us.pay.status.category.MANAGER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".cusui.receiver.ClssStatusReceiver">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_NOT_READY" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_IDLE" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_READY_FOR_TXN" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_PROCESSING" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_REMOVE_CARD" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_COMPLETED" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_ERROR" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_BLUE_ON" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_BLUE_OFF" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_BLUE_BLINK" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_YELLOW_ON" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_YELLOW_OFF" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_YELLOW_BLINK" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_GREEN_ON" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_GREEN_OFF" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_GREEN_BLINK" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_RED_ON" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_RED_OFF" />
+                <action android:name="com.pax.us.pay.CLSS_LIGHT_RED_BLINK" />
+
+                <category android:name="com.pax.us.pay.status.category.VIRTUAL_CLSS_LIGHT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".cusui.receiver.PinStatusReceiver">
+            <intent-filter>
+                <action android:name="com.pax.us.pay.PIN_CLEARED" />
+                <action android:name="com.pax.us.pay.PIN_ENTER_COMPLETED" />
+                <action android:name="com.pax.us.pay.PIN_ENTER_ABORTED" />
+                <action android:name="com.pax.us.pay.PIN_ENTERING" />
+                <action android:name="com.pax.us.pay.PIN_RNIB_TOUCH" />
+                <action android:name="com.pax.us.pay.SECURITY_ENTERING" />
+                <action android:name="com.pax.us.pay.SECURITY_DELETE" />
+                <action android:name="com.pax.us.pay.SECURITY_FORMAT_ERROR" />
+                <action android:name="com.pax.us.pay.SECURITY_LUHN_CHECK_ERROR" />
+                <action android:name="com.pax.us.pay.SECURITY_LUHN_CHECK_OK" />
+
+                <category android:name="com.pax.us.pay.status.category.PIN" />
+                <category android:name="com.pax.us.pay.ui.category.SECURITY" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".DownloadParamService">
+            <intent-filter>
+                <action android:name="com.sdk.service.ACTION_TO_DOWNLOAD_PARAMS" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="paydroid.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+
+</manifest>

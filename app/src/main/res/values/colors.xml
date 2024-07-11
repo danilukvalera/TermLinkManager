@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#995CF1</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#127CD8</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+
+    <color name="cbpui_colorPrimary">@color/colorPrimary</color>
+    <color name="cbpui_colorPrimaryDark">@color/colorPrimaryDark</color>
+
+    <color name="cbpui_color_background_white">#EEEEEE</color>
+
+    <color name="cbpui_trans_amount_color">#FD4800</color>
+
+    <color name="cbpui_gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="cbpui_gray_btn_bg_color">#D0D0D0</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+
+    <!-- prompt -->
+    <color name="cbpui_prompt_no_pwd_color">#666666</color>
+    <color name="cbpui_clear_button_text">#333333</color>
+
+    <color name="cbpui_gray_text">#333333</color>
+
+    <color name="prompt_text_color">#858585</color>
+
+    <!-- KeyBoard background -->
+    <color name="keyboard_background_color">#cccccc</color>
+    <!-- Trans Amount color -->
+    <color name="trans_amount_color">#FD4800</color>
+
+    <!-- prompt -->
+    <color name="prompt_no_pwd_color">#666666</color>
+
+    <color name="clss_blue">#3F51B5</color>
+    <color name="clss_yellow">#C5C53F</color>
+    <color name="clss_green">#51B53F</color>
+    <color name="clss_red">#C53F31</color>
+
+    <color name="error_stroke_color">#FF0000</color>
+    <color name="accent">@android:color/holo_red_light</color>
+    <color name="accent_amount">@android:color/holo_green_light</color>
+    <color name="primary_text_light">@android:color/primary_text_light</color>
+    <color name="secondary_text_light">@android:color/secondary_text_light</color>
+    <color name="primary_text_dark">@android:color/primary_text_dark</color>
+    <color name="secondary_text_dark">@android:color/secondary_text_dark</color>
+</resources>

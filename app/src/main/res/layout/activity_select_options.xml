@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_horizontal"
+        android:layout_marginEnd="@dimen/space_horizontal"
+        android:orientation="vertical">
+
+        <com.pax.customui.widget.PaxTextView
+            android:id="@+id/prompt_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_vertical"
+            android:layout_marginBottom="@dimen/space_vertical"
+            android:textColor="@color/primary_text_light"
+            android:textSize="@dimen/font_size_prompt" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/option_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:spanCount="1" />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_vertical"
+            android:layout_marginBottom="@dimen/space_vertical"
+            android:text="OK"
+            android:background="@drawable/bg_button_click"
+            android:textColor="@color/primary_text_dark"
+            android:textSize="@dimen/font_button" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="cbpui_activity_horizontal_margin">16dp</dimen>
+    <dimen name="cbpui_space_size_normal_large">15dp</dimen>
+    <dimen name="cbpui_font_size_larger">25sp</dimen>
+    <dimen name="cbpui_font_size_normal">20sp</dimen>
+    <dimen name="cbpui_font_size_large">23sp</dimen>
+    <dimen name="cbpui_font_size_small">17sp</dimen>
+
+    <dimen name="cbpui_common_circle_width">3dp</dimen>
+    <dimen name="cbpui_progress_circle_radius">34dp</dimen>
+
+    <dimen name="cbpui_text_size_18">18sp</dimen>
+
+    <!-- space -->
+    <dimen name="space_size_small">8dp</dimen>
+    <dimen name="space_size_normal">10dp</dimen>
+    <dimen name="space_size_normal_large">15dp</dimen>
+    <dimen name="space_size_large">18dp</dimen>
+    <dimen name="space_height_normal">36dp</dimen>
+    <dimen name="space_height_large">38dp</dimen>
+    <dimen name="space_height_larger">45dp</dimen>
+    <dimen name="space_height_largest">80dp</dimen>
+    <dimen name="space_margin_top_small">10dp</dimen>
+    <dimen name="space_margin_top_large">35dp</dimen>
+    <!--left and right space -->
+    <dimen name="space_left_and_right_smallest">4dp</dimen>
+    <dimen name="space_left_and_right_small">5dp</dimen>
+    <dimen name="space_left_and_right_normal_small">8dp</dimen>
+    <dimen name="space_left_and_right">15dp</dimen>
+    <dimen name="space_left_and_right_large">15dp</dimen>
+
+    <!-- new font size -->
+    <dimen name="font_size_smallest_small">18sp</dimen>
+    <dimen name="font_size_smallest">14sp</dimen>
+    <dimen name="font_size_smaller">15sp</dimen>
+    <dimen name="font_size_small">17sp</dimen>
+    <dimen name="font_size_normal_small">19sp</dimen>
+    <dimen name="font_size_normal">20sp</dimen>
+    <dimen name="font_size_large">20sp</dimen>
+    <dimen name="font_size_larger_small">24sp</dimen>
+    <dimen name="font_size_larger">25sp</dimen>
+    <dimen name="font_size_largest">60sp</dimen>
+    <dimen name="font_size_title">22sp</dimen>
+
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="button_height">64dp</dimen>
+    <dimen name="edit_height">70dp</dimen>
+    <dimen name="clss_light">30dp</dimen>
+
+    <!--vertical space-->
+    <dimen name="space_vertical_small">8dp</dimen>
+    <dimen name="space_vertical">24dp</dimen>
+    <dimen name="space_vertical_large">48dp</dimen>
+
+    <!--horizontal space-->
+    <dimen name="space_horizontal">16dp</dimen>
+
+    <dimen name="paint_width">5dp</dimen>
+
+    <dimen name="default_gap">24dp</dimen>
+
+    <dimen name="font_size_hint">14sp</dimen>
+    <dimen name="font_button">24sp</dimen>
+    <dimen name="font_size_prompt">24sp</dimen>
+    <dimen name="font_size_value">20sp</dimen>
+    <dimen name="font_edit_text">48sp</dimen>
+</resources>

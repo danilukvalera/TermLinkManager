@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:key="setting_options"
+        android:persistent="false"
+        android:title="Options">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_question_answer_24"
+            android:key="setting_prompt_msg"
+            android:summaryOff="Disable"
+            android:summaryOn="Enable"
+            android:title="Show Connection Message" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_customui"
+            android:key="setting_custom_ui_support"
+            android:summaryOff="Use the defaultUI."
+            android:summaryOn="Use the customUI."
+            android:title="CustomUI Support" />
+
+        <PreferenceScreen
+            android:fragment="com.pax.tlmanager.setting.SettingPasswordFragment"
+            android:icon="@drawable/ic_baseline_security_24"
+            android:title="Password Setting" />
+
+        <Preference android:key="select_idle_pic"
+            android:title="Idle Pictures"
+            android:icon="@drawable/ic_baseline_photo_album_24"/>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="setting_communication"
+        android:persistent="false"
+        android:title="Communication">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_bluetooth_24"
+            android:key="setting_comm_ble"
+            android:summaryOff="Disable"
+            android:summaryOn="Enable"
+            android:title="Bluetooth" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_settings_input_composite_24"
+            android:key="setting_comm_uart"
+            android:summaryOff="Disable"
+            android:summaryOn="Enable"
+            android:title="UART" />
+
+        <ListPreference
+            android:defaultValue="9600"
+            android:entries="@array/setting_comm_usb_rate"
+            android:entryValues="@array/setting_comm_usb_rate_value"
+            android:icon="@drawable/ic_baseline_settings_input_composite_24"
+            android:key="setting_comm_uart_rate"
+            android:summary="9600"
+            android:title="Baud Rate"
+            app:isPreferenceVisible="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_usb_24"
+            android:key="setting_comm_usb"
+            android:summaryOff="Disable"
+            android:summaryOn="Enable"
+            android:title="USB" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_settings_ethernet_24"
+            android:key="setting_comm_net"
+            android:summaryOff="Disable"
+            android:summaryOn="Enable"
+            android:title="Ethernet" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_settings_ethernet_24"
+            android:key="setting_comm_net_client"
+            android:summaryOff="Disable"
+            android:summaryOn="Enable"
+            android:title="Client Mode" />
+
+        <EditTextPreference
+            android:defaultValue="127.0.0.1"
+            android:dialogTitle="Host Address"
+            android:icon="@drawable/ic_baseline_settings_ethernet_24"
+            android:key="setting_comm_net_host"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Confirm"
+            android:summary="127.0.0.1"
+            android:title="Host Address" />
+
+        <EditTextPreference
+            android:defaultValue="10009"
+            android:dialogTitle="Host Port"
+            android:icon="@drawable/ic_baseline_settings_ethernet_24"
+            android:key="setting_comm_net_port"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Confirm"
+            android:summary="10009"
+            android:title="Host Port" />
+
+        <ListPreference
+            android:defaultValue="TCP"
+            android:dialogTitle="Protocol Type"
+            android:entries="@array/setting_comm_ethernet"
+            android:entryValues="@array/setting_comm_ethernet_value"
+            android:icon="@drawable/ic_baseline_settings_ethernet_24"
+            android:key="setting_comm_net_protocol"
+            android:summary="TCP"
+            android:title="Protocol Type" />
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:fragment="com.pax.tlmanager.setting.SettingAboutFragment"
+        android:icon="@drawable/ic_baseline_perm_device_information_24"
+        android:title="About" />
+
+    <Preference android:key="preference_exit"
+        android:title="Exit"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"/>
+</PreferenceScreen>

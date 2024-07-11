@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pax_fl_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#bababa"
+    android:paddingTop="2px"
+    android:visibility="gone" >
+
+    <com.pax.tlmanager.keyboard.SoftKeyboardSimpleStyle
+        android:id="@+id/pax_keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:keyBackground="@drawable/pax_keyboard_general"
+        android:keyTextColor="@android:color/black"
+        android:keyTextSize="28dp"
+        android:labelTextSize="20dp"
+        android:shadowColor="@android:color/transparent"
+        android:shadowRadius="0.0" />
+
+</RelativeLayout>
